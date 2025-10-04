@@ -1,5 +1,6 @@
 ﻿namespace AppForSEII2526.API.Models
 {
+    [Index(nameof(Title), IsUnique = true)]
     public class Movie
     {
         public Movie()
