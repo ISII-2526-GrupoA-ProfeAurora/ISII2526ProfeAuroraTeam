@@ -1,5 +1,7 @@
 ﻿namespace AppForSEII2526.API.Models
 {
+    //Title is unique for each instance of Movie
+    [Index(nameof(Name), IsUnique = true)]
     public class Genre
     {
         public Genre()
