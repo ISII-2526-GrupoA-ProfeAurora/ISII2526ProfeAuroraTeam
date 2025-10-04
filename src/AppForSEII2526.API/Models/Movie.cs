@@ -2,6 +2,21 @@
 {
     public class Movie
     {
+        public Movie()
+        {
+        }
+
+        public Movie(string title, Genre genre, DateTime releaseDate, decimal priceForPurchase, int quantityForPurchase, double priceForRenting, int quantityForRenting)
+        {
+            Title = title;
+            PriceForRenting = priceForRenting;
+            PriceForPurchase = priceForPurchase;
+            ReleaseDate = releaseDate;
+            Genre = genre;
+            QuantityForPurchase = quantityForPurchase;
+            QuantityForRenting = quantityForRenting;
+        }
+
         public int Id { get; set; }
 
         [StringLength(100, ErrorMessage = "Title name cannot be longer than 100 characters.")]
@@ -20,7 +35,7 @@
         [DataType(System.ComponentModel.DataAnnotations.DataType.Currency)]
         [Range(0.5, 100, ErrorMessage = "Minimum is 0.5 and maximum 100")]
         [Display(Name = "Price For Renting")]
-        public decimal PriceForRenting { get; set; }
+        public double PriceForRenting { get; set; }
         
         [Display(Name = "Quantity For Renting")]
         [Range(1, int.MaxValue, ErrorMessage = "Minimum quantity for Renting is 1")]
