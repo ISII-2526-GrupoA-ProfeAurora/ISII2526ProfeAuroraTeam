@@ -33,7 +33,7 @@
         
         public Genre Genre { get; set; }
 
-
+        public IList<RentalItem> RentalItems { get; set; }
 
     }
 }
