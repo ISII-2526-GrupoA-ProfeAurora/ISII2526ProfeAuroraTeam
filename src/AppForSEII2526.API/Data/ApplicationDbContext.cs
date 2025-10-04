@@ -6,5 +6,6 @@ namespace AppForSEII2526.API.Data;
 
 public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : IdentityDbContext<ApplicationUser>(options) {
     public DbSet<Genre> Genres { get; set; }
+    public DbSet<Movie> Movies { get; set; }
 
 }
