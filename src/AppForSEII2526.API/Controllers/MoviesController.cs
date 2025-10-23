@@ -22,7 +22,7 @@ namespace AppForSEII2526.API.Controllers
         [Route("[action]")]
         [ProducesResponseType(typeof(decimal), (int)HttpStatusCode.OK)]
         [ProducesResponseType(typeof(string), (int)HttpStatusCode.BadRequest)]
-        public async Task<ActionResult> ComputeDivision(decimal op1, decimal op2)
+        public async Task<ActionResult> GetComputeDivision(decimal op1, decimal op2)
         {
             if (op2 == 0)
             {
@@ -32,6 +32,8 @@ namespace AppForSEII2526.API.Controllers
             decimal result = decimal.Round(op1 / op2, 2); //operacion dividir
             return Ok(result);
         }
+
+
 
     }
 }
